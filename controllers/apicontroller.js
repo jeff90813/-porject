@@ -3,17 +3,20 @@ const motherboardServ = require('./services/motherboardServ');
 const ramServ = require('./services/ramServ');
 
 exports.getcpu = async (req, res) => {
-  const data = await cpuServ.
-  res.json(data);
+  const data = await cpuServ.fetchCpu();
+  //res.json(data);
+  res.render('cpu', {data});
 }
 
 exports.getmotherboard = async (req, res) => {
-  const data = await motherboardServ
-  res.json(data);
+  const data = await motherboardServ.fetchMotherboard();
+  //res.json(data);
+  res.render('motherboard', {data});
 }
 
 
 exports.getram = async (req, res) => {
-  const data = await ramServ
-  res.json(data);
+  const data = await ramServ.fetchRam();
+  //res.json(data);
+  res.render('ram', {data});
 }

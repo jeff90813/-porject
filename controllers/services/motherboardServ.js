@@ -1,6 +1,6 @@
-const Motherboard = require('../../models/cpuModel')
+const Motherboard = require('../../models/motherboardModel')
 
-exports.fetchCpu = async () => {
+exports.fetchMotherboard = async () => {
     try{
         const [rows] = await Motherboard.fetchAll();
         return rows;

@@ -11,7 +11,7 @@ const Motherboard = class Motherboard {
 
     // READ
     static fetchAll() {
-        return db.execute('SELECT * from ');
+        return db.execute('');
     }
 
 

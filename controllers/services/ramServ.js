@@ -1,6 +1,6 @@
-const Ram = require('../../models/cpuModel')
+const Ram = require('../../models/ramModel')
 
-exports.fetchCpu = async () => {
+exports.fetchRam = async () => {
     try{
         const [rows] = await Ram.fetchAll();
         return rows;
