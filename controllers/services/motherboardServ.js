@@ -8,3 +8,11 @@ exports.fetchMotherboard = async () => {
         return {message: 'Error on getting data'}
     }
 }
+exports.fetchMotherboard_id = async (id) => {
+    try{
+        const [rows] = await Motherboard.fetchID(id);
+        return rows;
+    }catch(err){
+        return {message: 'Error on getting data'}
+    }
+}
