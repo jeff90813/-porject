@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var apiRouter = require('./routes/api');
+var CPU_CRUD = require('./routes/CPU_CRUD');
 var crudramRouter = require('./routes/ram');
 
 var app = express();
@@ -21,9 +22,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/api', apiRouter);
+app.use('/users', usersRouter);
+
+app.use('/CPU_CRUD', CPU_CRUD);
 app.use('/crud_ram', crudramRouter);
 
 // catch 404 and forward to error handler
