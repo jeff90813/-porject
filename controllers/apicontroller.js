@@ -14,6 +14,17 @@ exports.getmotherboard = async (req, res) => {
   res.render('motherboard', {data});
 }
 
+exports.getmotherboard_id = async function (req, res,next) {
+  const id = req.params.socket_id;
+  const data = await motherboardServ.fetchMotherboard_id(id);
+ //res.json(data);
+  res.render('motherboard', {data});
+}
+
+
+
+
+
 
 exports.getram = async (req, res) => {
   const data = await ramServ.fetchRam();
