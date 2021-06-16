@@ -46,7 +46,7 @@ exports.getselection = async (req, res) => {
   const data = await cpuServ.fetchCpu();
   //res.json(data);
   res.render('selection_list', {data});
-
+}
 
 exports.getram_id =async(req,res)=>{
   const cpu_id=req.params.cpu_id;
