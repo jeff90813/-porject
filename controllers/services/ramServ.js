@@ -16,6 +16,7 @@ exports.fetchram_id = async(cid,id) => {
         
         return rows;
         
+
     }catch(err){
         return {message: 'Error on getting data'}
     }

@@ -42,11 +42,18 @@ exports.getram = async (req, res) => {
 }
 
 
+exports.getselection = async (req, res) => {
+  const data = await cpuServ.fetchCpu();
+  //res.json(data);
+  res.render('selection_list', {data});
+
 
 exports.getram_id =async(req,res)=>{
   const cpu_id=req.params.cpu_id;
   const id=req.params.id;
+
   const data =await ramServ.fetchram_id(cpu_id,id);
+
   res.render('ram',{data});
   
 }
