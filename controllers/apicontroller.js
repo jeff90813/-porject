@@ -31,3 +31,9 @@ exports.getram = async (req, res) => {
   //res.json(data);
   res.render('ram', {data});
 }
+
+exports.getselection = async (req, res) => {
+  const data = await cpuServ.fetchCpu();
+  //res.json(data);
+  res.render('selection_list', {data});
+}
