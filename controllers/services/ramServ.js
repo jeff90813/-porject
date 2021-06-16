@@ -10,10 +10,13 @@ exports.fetchRam = async () => {
     }
 }
 
-exports.fetchram_id = async(id) => {
+exports.fetchram_id = async(cid,id) => {
     try{
-        const [rows] = await Ram.fetchID(id);
+        const [rows] = await Ram.fetchID(cid,id);
+        
         return rows;
+        
+
     }catch(err){
         return {message: 'Error on getting data'}
     }
