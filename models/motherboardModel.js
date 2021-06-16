@@ -13,7 +13,7 @@ const Motherboard = class motherboard {
 
     // READ
     static fetchAll() {
-        return db.execute('SELECT motherboard.ram_id SELECT motherboard.id,motherboard.name,image_url,motherboard.cpu_type,motherboard.size,motherboard.cpu_type,classification.name as ram_type from motherboard,classification where  ram_id=classification.ID;');
+        return db.execute(' SELECT motherboard.id,motherboard.name,image_url,motherboard.cpu_type,motherboard.size,motherboard.cpu_type,classification.name as ram_type from motherboard,classification where  ram_id=classification.ID;');
 
     }
     /*static fetchID(id) {
