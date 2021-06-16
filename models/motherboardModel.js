@@ -1,24 +1,29 @@
 const db = require('../utils/database');
 
 const Motherboard = class motherboard {
-    constructor(id, name, socket_id, ram_id, size,cpu_type) {
+    constructor(id, name, socket_id, ram_id, size,cpu_type,cpu_id) {
        this.id = id;
        this.name = name;
        this.socket_id = socket_id;
        this.ram_id = ram_id;
        this.size = size;
        this.cpu_type=cpu_type;
+       this.cpu_id=cpu_id;
     }
 
     // READ
     static fetchAll() {
-        return db.execute('SELECT motherboard.id,motherboard.name,image_url,motherboard.cpu_type,motherboard.size,motherboard.cpu_type,classification.name as ram_type from motherboard,classification where  ram_id=classification.ID;');
+        return db.execute('SELECT motherboard.ram_id SELECT motherboard.id,motherboard.name,image_url,motherboard.cpu_type,motherboard.size,motherboard.cpu_type,classification.name as ram_type from motherboard,classification where  ram_id=classification.ID;');
 
     }
-    static fetchID(id) {
-        return db.execute('SELECT motherboard.id,motherboard.name,image_url,motherboard.size,motherboard.cpu_type,classification.name as ram_type from motherboard,classification where  classification.ID=socket_id and classification.ID=?;',[id]);
+    /*static fetchID(id) {
+        return db.execute('SELECT motherboard.ram_id,motherboard.id,motherboard.name,image_url,motherboard.size,motherboard.cpu_type,classification.name as ram_type from motherboard,classification where  classification.ID=socket_id and classification.ID=?;',[id]);
 
 
+    }*/
+
+    static fetchID(id){
+        return db.execute('SELECT cpu_69.id as cpu_id,motherboard.ram_id,motherboard.id,motherboard.name,motherboard.image_url,motherboard.size,motherboard.cpu_type,classification.name as ram_type from motherboard,classification,cpu_69 where motherboard.socket_id=cpu_69.socket_id and classification.id=cpu_69.socket_id and cpu_69.id=?;',[id]);
     }
     
 
