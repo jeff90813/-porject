@@ -10,6 +10,9 @@ var apiRouter = require('./routes/api');
 
 var CPU_CRUD = require('./routes/CPU_CRUD');
 var crudramRouter = require('./routes/ram');
+var MOTHERBOARD_CRUD=require('./routes/crud/MO_CRUD');
+var crud_start=require('./routes/crud_start');
+
 
 
 var app = express();
@@ -29,6 +32,8 @@ app.use('/users', usersRouter);
 
 app.use('/CPU_CRUD', CPU_CRUD);
 app.use('/crud_ram', crudramRouter);
+app.use('/crud_motherboard',  MOTHERBOARD_CRUD);
+app.use('/crud',crud_start);
 
 
 // catch 404 and forward to error handler
