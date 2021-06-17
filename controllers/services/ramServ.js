@@ -10,9 +10,11 @@ exports.fetchRam = async () => {
     }
 }
 
-exports.fetchram_id = async(cid,id) => {
+exports.fetchram_id = async(cid,mid) => {
+    
     try{
-        const [rows] = await Ram.fetchID(cid,id);
+        
+        const [rows] = await Ram.fetchID(cid,mid);
         
         return rows;
         
