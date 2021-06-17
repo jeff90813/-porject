@@ -62,15 +62,15 @@
                 <div class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-container-layout-1">
 
 
-                 <img alt="" class="u-expanded-width-xs u-image u-image-default u-image-1" src="<%= data[i].image_url %>">
+                 <img alt="" class="u-expanded-width-xs u-image u-image-default u-image-1" src="<%= data[i].cpu_image %>">
 
 
                   <div class="u-align-left-xs u-container-style u-expanded-width-xs u-group u-video-cover u-group-1">
                     <div class="u-container-layout u-valign-middle-xs u-container-layout-2">
-                      <h3 class="u-custom-font u-font-oswald u-text u-text-3"><%= data[i].name %></h3>
+                      <h3 class="u-custom-font u-font-oswald u-text u-text-3"><%= data[i].cname %></h3>
                       <p class="u-text u-text-4">核心數: <%= data[i].core %></p>
                       <p class="u-text u-text-4">頻率: <%= data[i].GHz %></p>
-                      <p class="u-text u-text-4">腳位: <%= data[i].socket %></p>
+                      
 
                       
 
@@ -90,13 +90,12 @@
             <% for(let i=0; i<data.length; i++ ) { %>
               <div class="u-container-style u-list-item u-repeater-item u-white u-list-item">
                 <div class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-container-layout-1">
-                  <img alt="" class="u-expanded-width-xs u-image u-image-default u-image-1" src="<%= data[i].image_url %>">
+                  <img alt="" class="u-expanded-width-xs u-image u-image-default u-image-1"  src="<%= data[i].motherboard_image %>">
                   <div class="u-align-left-xs u-container-style u-expanded-width-xs u-group u-video-cover u-group-1">
                     <div class="u-container-layout u-valign-middle-xs u-container-layout-2">
-                      <h3 class="u-custom-font u-font-oswald u-text u-text-3"><%= data[i].name %></h3>
-                      <p class="u-text u-text-4">size: <%= data[i].size %></p>
-                      <p class="u-text u-text-4">Ram類型: <%= data[i].ram_type %></p>
-                      <p class="u-text u-text-4">cpu廠商: <%= data[i].cpu_type %></p>
+                      <h3 class="u-custom-font u-font-oswald u-text u-text-3"><%= data[i].mname %></h3>
+                      <p class="u-text u-text-4">size: <%= data[i].msize %></p>
+                  
                       
                     </div>
                   </div>
@@ -114,13 +113,13 @@
             <% for(let i=0; i<data.length; i++ ) { %>
               <div class="u-container-style u-list-item u-repeater-item u-white u-list-item">
                 <div class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-container-layout-1">
-                  <img alt="" class="u-expanded-width-xs u-image u-image-default u-image-1" src="<%= data[i].image_url %>">
+                  <img alt="" class="u-expanded-width-xs u-image u-image-default u-image-1" src="<%= data[i].ram_image %>">
                   <div class="u-align-left-xs u-container-style u-expanded-width-xs u-group u-video-cover u-group-1">
                     <div class="u-container-layout u-valign-middle-xs u-container-layout-2">
-                      <h3 class="u-custom-font u-font-oswald u-text u-text-3"><%= data[i].name %></h3>
+                      <h3 class="u-custom-font u-font-oswald u-text u-text-3"><%= data[i].rname %></h3>
                       <p class="u-text u-text-4">頻率: <%= data[i].clock_rate %></p>
-                      <p class="u-text u-text-4">空間: <%= data[i].size %></p>
-                      <p class="u-text u-text-4">Ram類型: <%= data[i].ram_type %></p>
+                      <p class="u-text u-text-4">空間: <%= data[i].rsize %></p>
+                      
                       
                     </div>
                   </div>

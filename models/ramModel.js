@@ -16,9 +16,11 @@ const Ram = class Ram {
     static fetchAll() {
         return db.execute('SELECT motherboard.id as motherboard_id,ram.id, ram.name, clock_rate, size, image_url, classification.name as ram_type FROM ram, classification,motherboard where ram_id = classification.ID');
     }
-    static fetchID(id,cid){
-        return db.execute('SELECT cpu_69.id as cpu_id, motherboard.id as motherboard_id ,ram.id, ram.name, clock_rate, ram.size, ram.image_url, classification.name as ram_type  FROM ram, classification,motherboard ,cpu_69  where classification.ID=motherboard.ram_id and classification.ID = ram.ram_id and cpu_69.id=? and motherboard.id=?',[cid],[id]); 
-       }
+    static fetchID(cid,id){
+        console.log(cid,id);
+        
+        return db.execute('SELECT cpu_69.id as cpu_id, motherboard.id as motherboard_id ,ram.id, ram.name, clock_rate, ram.size, ram.image_url, classification.name as ram_type  FROM ram, classification,motherboard ,cpu_69  where classification.ID=motherboard.ram_id and classification.ID = ram.ram_id and cpu_69.id=? AND motherboard.id=?',[cid,id]);
+    }
 
 }
 
