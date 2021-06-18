@@ -27,6 +27,7 @@ const Ram = class Ram {
         where classification.ID = motherboard.ram_id and cpu_69.id = ? and motherboard.id = ? and motherboard.ram_id = ram.ram_id;`, [cid, mid]);
     }
 
+
 }
 
 module.exports = Ram;

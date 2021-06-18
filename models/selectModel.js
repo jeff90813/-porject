@@ -20,6 +20,7 @@ const Select = class select {
         this.mname=mname;
         this.rname=rname;
 
+
     }
     static fetchCpu(cpu_id){
       return db.execute(`SELECT cpu_69.id, cpu_69.name as cname, core, GHz, image_url as cpu_image, classification.name as socket FROM cpu_69, classification 
@@ -47,6 +48,7 @@ const Select = class select {
 
 
         //return db.execute('Select  cpu_69.name as cname,motherboard.name as mname,ram.name as rname,ram.size as rsize,ram.clock_rate,motherboard.size as msize,cpu_69.GHz,cpu_69.core , cpu_69.image_url as cpu_image , motherboard.image_url as motherboard_image , ram.image_url as ram_image from cpu_69,motherboard,ram where cpu_69.id=? and motherboard.id=? and ram.id=?',[cpu_id,motherboard_id,ram_id]);
+
      }
 
 }
