@@ -64,15 +64,19 @@
                 <div class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-container-layout-1">
 
 
+
                  <img alt="" class="u-expanded-width-xs u-image u-image-default u-image-1" src="<%= cpu_data[i].cpu_image %>">
+
 
 
                   <div class="u-align-left-xs u-container-style u-expanded-width-xs u-group u-video-cover u-group-1">
                     <div class="u-container-layout u-valign-middle-xs u-container-layout-2">
+
                       <h3 class="u-custom-font u-font-oswald u-text u-text-3"><%= cpu_data[i].cname %></h3>
                       <p class="u-text u-text-4">核心數: <%= cpu_data[i].core %></p>
                       <p class="u-text u-text-4">頻率: <%= cpu_data[i].GHz %></p>
                       <p class="u-text u-text-4">頻率: <%= cpu_data[i].socket %></p>
+
                     </div>
                   </div>
                 </div>
@@ -89,6 +93,7 @@
             <% for(let i=0; i<motherboard_data.length; i++ ) { %>
               <div class="u-container-style u-list-item u-repeater-item u-white u-list-item">
                 <div class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-container-layout-1">
+
                   <img alt="" class="u-expanded-width-xs u-image u-image-default u-image-1"  src="<%= motherboard_data[i].motherboard_image %>">
                   <div class="u-align-left-xs u-container-style u-expanded-width-xs u-group u-video-cover u-group-1">
                     <div class="u-container-layout u-valign-middle-xs u-container-layout-2">
@@ -96,6 +101,7 @@
                       <p class="u-text u-text-4">size: <%= motherboard_data[i].msize %></p>
                       <p class="u-text u-text-4">cpu廠商: <%= motherboard_data[i].cpu_type %></p>
                       <p class="u-text u-text-4">Ram類型: <%= motherboard_data[i].ram_type %></p>
+
                     </div>
                   </div>
                 </div>
@@ -112,6 +118,7 @@
             <% for(let i=0; i<ram_data.length; i++ ) { %>
               <div class="u-container-style u-list-item u-repeater-item u-white u-list-item">
                 <div class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-container-layout-1">
+
                   <img alt="" class="u-expanded-width-xs u-image u-image-default u-image-1" src="<%= ram_data[i].ram_image %>">
                   <div class="u-align-left-xs u-container-style u-expanded-width-xs u-group u-video-cover u-group-1">
                     <div class="u-container-layout u-valign-middle-xs u-container-layout-2">
@@ -119,6 +126,7 @@
                       <p class="u-text u-text-4">頻率: <%= ram_data[i].clock_rate %></p>
                       <p class="u-text u-text-4">空間: <%= ram_data[i].rsize %></p>
                       <p class="u-text u-text-4">Ram類型: <%= ram_data[i].ram_type %></p>
+
                       
                     </div>
                   </div>
