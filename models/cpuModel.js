@@ -13,7 +13,7 @@ const Cpu = class Cpu {
 
     // READ
     static fetchAll() {
-        return db.execute('SELECT socket_id,cpu_69.id, cpu_69.name, core, GHz, image_url, classification.name as socket FROM cpu_69, classification where socket_id = classification.ID');
+        return db.execute('SELECT socket_id,cpu_69.id, cpu_69.name, core, GHz, image_url, classification.name as socket FROM cpu_69, classification where socket_id = classification.ID;');
     }
 
 

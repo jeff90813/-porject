@@ -39,11 +39,20 @@ exports.getmotherboard_id = async function (req, res,next) {
 exports.getselection=async function(req,res,next){
   const cpu_id=req.params.cpu_id ;
   const motherboard_id=req.params.motherboard_id ;
-  const id=req.params.id ;
+  const ram_id=req.params.id ;
+  console.log(cpu_id, motherboard_id, ram_id);
 
-  const data=await selectServ.fetchALL(cpu_id,motherboard_id,id);
-  console.log(data);
-  res.render('selection_list',{data});
+  const cpu_data = await selectServ.fetchcpu(cpu_id);
+  const motherboard_data = await selectServ.fetchmotherboard(cpu_id,motherboard_id);
+  const ram_data = await selectServ.fetchram(cpu_id, motherboard_id, ram_id); 
+
+  //console.log(data);
+  //res.json(cpu_data);
+  res.render('selection_list',{
+    cpu_data,
+    motherboard_data,
+    ram_data,
+  });
 }
 
 
