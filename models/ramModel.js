@@ -14,7 +14,7 @@ const Ram = class Ram {
 
     // READ
     static fetchAll() {
-        return db.execute('SELECT motherboard.id as motherboard_id,ram.id, ram.name, clock_rate, size, image_url, classification.name as ram_type FROM ram, classification,motherboard where ram_id = classification.ID');
+        return db.execute('SELECT ram.id, ram.name, clock_rate, ram.size, ram.image_url, classification.name as ram_type FROM ram, classification where ram.ram_id = classification.ID');
     }
     static fetchID(cid,id){
         console.log(cid,id);

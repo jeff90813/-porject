@@ -7,19 +7,34 @@ exports.getcpu = async (req, res) => {
   //res.json(data);
   res.render('cpu', {data});
 }
+exports.getcpulist = async (req, res) => {
+  const data = await cpuServ.fetchCpu();
+  //res.json(data);
+  res.render('list/cpu', {data});
+}
+
+
+
 
 exports.getmotherboard = async (req, res) => {
   const data = await motherboardServ.fetchMotherboard();
   //res.json(data);
   res.render('motherboard', {data});
 }
-
+exports.getmotherboardlist = async (req, res) => {
+  const data = await motherboardServ.fetchMotherboard();
+  //res.json(data);
+  res.render('list/motherboard', {data});
+}
 exports.getmotherboard_id = async function (req, res,next) {
   const id = req.params.id;
   const data = await motherboardServ.fetchMotherboard_id(id);
  //res.json(data);
   res.render('motherboard', {data});
 }
+
+
+
 
 exports.getselection=async function(req,res,next){
   const cpu_id=req.params.cpu_id ;
@@ -34,17 +49,16 @@ exports.getselection=async function(req,res,next){
 
 
 
-
-
 exports.getram = async (req, res) => {
   const data = await ramServ.fetchRam();
   //res.json(data);
   res.render('ram', {data});
 }
-
-
-
-
+exports.getramlist = async (req, res) => {
+  const data = await ramServ.fetchRam();
+  //res.json(data);
+  res.render('list/ram', {data});
+}
 exports.getram_id =async(req,res)=>{
   const cid=req.params.cpu_id;
   const mid=req.params.id;
